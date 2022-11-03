@@ -74,7 +74,7 @@ mod tests {
         // set and get
         let contract_name = "crate:cw20-base";
         let contract_version = "0.2.0";
-        set_contract_version(&mut store, contract_name, contract_version,None).unwrap();
+        set_contract_version(&mut store, contract_name, contract_version, None).unwrap();
 
         let loaded = get_contract_version(&store).unwrap();
         let expected = ContractVersion {
@@ -87,8 +87,17 @@ mod tests {
         // set and get with supported_interface
         let contract_name = "crate:cw20-base";
         let contract_version = "0.2.0";
-        let supported_interface = Some(Vec::from(["crates.io:cw2".to_string(),"crates.io:cw721".to_string()]));
-        set_contract_version(&mut store, contract_name, contract_version,supported_interface.clone()).unwrap();
+        let supported_interface = Some(Vec::from([
+            "crates.io:cw2".to_string(),
+            "crates.io:cw721".to_string(),
+        ]));
+        set_contract_version(
+            &mut store,
+            contract_name,
+            contract_version,
+            supported_interface.clone(),
+        )
+        .unwrap();
 
         let loaded = get_contract_version(&store).unwrap();
         let expected = ContractVersion {
