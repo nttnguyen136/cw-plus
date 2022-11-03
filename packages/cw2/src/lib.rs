@@ -33,10 +33,10 @@ pub struct ContractVersion {
     /// the only code that needs to understand the version parsing is code that knows how to
     /// migrate from the given contract (and is tied to it's implementation somehow)
     pub version: String,
-    /// supported_interface is an optional parameter returning a vector of string represents interfaces 
-    /// that the contract support The string value is the interface crate names in Rust crate Registry. 
+    /// supported_interface is an optional parameter returning a vector of string represents interfaces
+    /// that the contract support The string value is the interface crate names in Rust crate Registry.
     /// This parameter is inspired by the EIP-165 from Ethereum.
-    /// Each string value should follow a common standard such as <Registry Domain>:<Crate Name>  
+    /// Each string value should follow a common standard such as <Registry Domain>:<Crate Name>
     /// e.g ["crates.io:cw721","crates.io:cw2"]
     /// NOTE: this is just a hint for the caller to adapt on how to interact with this contract.
     /// There is no guarantee that the contract actually implement these interfaces.
@@ -100,7 +100,7 @@ mod tests {
         // set and get
         let contract_name = "crate:cw20-base";
         let contract_version = "0.2.0";
-        set_contract_version(&mut store, contract_name, contract_version,None).unwrap();
+        set_contract_version(&mut store, contract_name, contract_version, None).unwrap();
 
         let loaded = get_contract_version(&store).unwrap();
         let expected = ContractVersion {
@@ -113,8 +113,17 @@ mod tests {
         // set and get with supported_interface
         let contract_name = "crate:cw20-base";
         let contract_version = "0.2.0";
-        let supported_interface = Some(Vec::from(["crates.io:cw2".to_string(),"crates.io:cw721".to_string()]));
-        set_contract_version(&mut store, contract_name, contract_version,supported_interface.clone()).unwrap();
+        let supported_interface = Some(Vec::from([
+            "crates.io:cw2".to_string(),
+            "crates.io:cw721".to_string(),
+        ]));
+        set_contract_version(
+            &mut store,
+            contract_name,
+            contract_version,
+            supported_interface.clone(),
+        )
+        .unwrap();
 
         let loaded = get_contract_version(&store).unwrap();
         let expected = ContractVersion {
