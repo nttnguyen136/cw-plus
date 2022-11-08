@@ -1,8 +1,8 @@
 #!/bin/bash
-BUILD="TRUE"
+# BUILD="TRUE"
 WORKSPACE=cosmwasm/workspace-optimizer:0.12.6
 CHAIN_ID=aura-testnet
-# CHAIN_ID=serenity-testnet-001
+#CHAIN_ID=serenity-testnet-001
 # CHAIN_ID=euphoria-1
 WASM_PATH="./artifacts/"
 WASM_FILE="cw20_base.wasm"
@@ -10,14 +10,16 @@ WASM_FILE_PATH=$WASM_PATH$WASM_FILE
 WALLET=wallet
 GITHUB="https://github.com/nttnguyen136/cw-plus"
 
-CONTRACT_LABEL="CDolla"
+# CODE_ID=344
+
+CONTRACT_LABEL="AURASAMPLE NEW "
 
 INIT_MSG='{
-"name": "CDolla",
-"symbol": "CVND",
+"name": "AuraTokenSample New",
+"symbol": "AURAS1",
 "decimals": 6,
 "initial_balances": [],
-"mint": { "minter": "aura1afuqcya9g59v0slx4e930gzytxvpx2c43xhvtx" },
+"mint": { "minter": "aura1h6r78trkk2ewrry7s3lclrqu9a22ca3hpmyqfu" },
 "marketing": { "description": "Coin gives you the joint benefits of open blockchain technology and traditional currency by converting your cash into a stable digital currency equivalent.","logo": {"url": "https://nft-ipfs.s3.amazonaws.com/assets/imgs/icons/color/aura.svg"}}
 }'
 
@@ -45,7 +47,7 @@ case $CHAIN_ID in
     RPC="https://rpc.euphoria.aura.network:443"
     AURASCAN="https://euphoria.aurascan.io"
     NODE="--node $RPC"
-    FEE="0.0025ueura"
+    FEE="0.0025ueaura"
     ;;
 esac
 
@@ -60,29 +62,30 @@ echo "======================================================="
 echo " "
 
 
-if [ "$BUILD" = "TRUE" ]
-then
+if [ "$BUILD" = "TRUE" ];then
   DOCKER_BUILDKIT=1
   docker run --rm -v "$(pwd)":/code \
     --mount type=volume,source="$(basename "$(pwd)")_cache",target=/code/target \
     --mount type=volume,source=registry_cache,target=/usr/local/cargo/registry \
     $WORKSPACE
-  sleep 1
+  sleep 10
 fi
 
-TXHASH=$($AURAD tx wasm store $WASM_FILE_PATH --from $WALLET $TXFLAG --output json | jq -r ".txhash")
+if [ -z $CODE_ID]; then
+  TXHASH=$($AURAD tx wasm store $WASM_FILE_PATH --from $WALLET $TXFLAG --output json | jq -r ".txhash")
 
-echo "Store Hash: $AURASCAN/transaction/$TXHASH"
+  echo "Store Hash: $AURASCAN/transaction/$TXHASH"
 
-sleep 10
+  sleep 10
 
-CODE_ID=$(curl "$RPC/tx?hash=0x$TXHASH" | jq -r ".result.tx_result.log" | jq -r ".[0].events[-1].attributes[0].value")
+  CODE_ID=$(curl "$RPC/tx?hash=0x$TXHASH" | jq -r ".result.tx_result.log" | jq -r ".[0].events[-1].attributes[0].value")
+fi
 
-if [ -n "$CODE_ID" ]
-then 
+if [ $CODE_ID -ge 0 ]; then
+echo 'bbbb'
   INIT=$INIT_MSG
 
-  LABEL="$CONTRACT_LABEL $CODE_ID"
+  LABEL="$CODE_ID $CONTRACT_LABEL"
 
   echo "=================== CONTRACT INFO ==================="
   echo "CODE_ID:       $CODE_ID"
