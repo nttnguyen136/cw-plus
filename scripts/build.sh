@@ -12,7 +12,7 @@ GITHUB="https://github.com/nttnguyen136/cw-plus"
 
 CONTRACT_LABEL="CDolla"
 
-CODE_ID=308
+# CODE_ID=309
 
 INIT_MSG='{
 "name": "CDolla",
@@ -33,7 +33,7 @@ case $CHAIN_ID in
     RPC="https://rpc.dev.aura.network:443"
     AURASCAN="http://explorer.dev.aura.network"
     NODE="--node $RPC"
-    FEE="0.0025utaura" 
+    FEE="0.0025utaura"
     ;;
 
   serenity-testnet-001)
@@ -80,11 +80,11 @@ echo "Store Hash: $AURASCAN/transaction/$TXHASH"
 
 sleep 10
 
-CODE_ID=$(curl "$RPC/tx?hash=0x$TXHASH" | jq -r ".result.tx_result.log" | jq -r ".[0].events[-1].attributes[0].value")
+CODE_ID=$(curl "$RPC/tx?hash=0x$TXHASH" | jq -r ".result.tx_result.log" | jq -r ".[0].events[-1].attributes[-1].value")
 fi
 
 if [ -n "$CODE_ID" ]
-then 
+then
   INIT=$INIT_MSG
 
   LABEL="$CONTRACT_LABEL $CODE_ID"
