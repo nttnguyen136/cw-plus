@@ -12,6 +12,8 @@ GITHUB="https://github.com/nttnguyen136/cw-plus"
 
 CONTRACT_LABEL="CDolla"
 
+CODE_ID=308
+
 INIT_MSG='{
 "name": "CDolla",
 "symbol": "CVND",
@@ -70,6 +72,8 @@ then
   sleep 1
 fi
 
+if [ -z "$CODE_ID" ]; then
+
 TXHASH=$($AURAD tx wasm store $WASM_FILE_PATH --from $WALLET $TXFLAG --output json | jq -r ".txhash")
 
 echo "Store Hash: $AURASCAN/transaction/$TXHASH"
@@ -77,6 +81,7 @@ echo "Store Hash: $AURASCAN/transaction/$TXHASH"
 sleep 10
 
 CODE_ID=$(curl "$RPC/tx?hash=0x$TXHASH" | jq -r ".result.tx_result.log" | jq -r ".[0].events[-1].attributes[0].value")
+fi
 
 if [ -n "$CODE_ID" ]
 then 
