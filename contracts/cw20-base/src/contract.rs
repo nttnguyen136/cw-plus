@@ -148,7 +148,7 @@ pub fn instantiate(
         MARKETING_INFO.save(deps.storage, &data)?;
     }
 
-    Ok(Response::new().add_attribute("instantiate", "17"))
+    Ok(Response::new().add_attribute("instantiate", "18"))
 }
 
 pub fn create_accounts(deps: &mut DepsMut, accounts: &[Cw20Coin]) -> StdResult<Uint128> {
