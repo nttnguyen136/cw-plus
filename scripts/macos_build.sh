@@ -12,7 +12,7 @@ GITHUB="https://github.com/nttnguyen136/cw-plus"
 
 CONTRACT_LABEL="CW20 Contract"
 
-# CODE_ID=843
+# CODE_ID=1073
 
 INIT_MSG='{
 "name": "New CW20 Token",
