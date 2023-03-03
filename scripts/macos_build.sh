@@ -17,7 +17,7 @@ CONTRACT_LABEL="CW20 Contract"
 INIT_MSG='{
 "name": "New CW20 Token",
 "symbol": "NEWTOKEN",
-"decimals": 6,
+"decimals": 12,
 "initial_balances": [],
 "mint": { "minter": "aura1afuqcya9g59v0slx4e930gzytxvpx2c43xhvtx" },
 "marketing": {"marketing":"aura1h6r78trkk2ewrry7s3lclrqu9a22ca3hpmyqfu", "description": "Coin gives
