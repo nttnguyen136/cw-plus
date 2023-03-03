@@ -85,7 +85,7 @@ if [ -n "$CODE_ID" ]; then
   INIT_MSG='{
   "name": "'$CODE_ID' New Token",
   "symbol": "NEWTOKEN",
-  "decimals": 6,
+  "decimals": 12,
   "initial_balances": [],
   "mint": { "minter": "aura1afuqcya9g59v0slx4e930gzytxvpx2c43xhvtx" },
   "marketing": {"marketing":"aura1h6r78trkk2ewrry7s3lclrqu9a22ca3hpmyqfu", "description": "Coin gives you the joint benefits of open blockchain technology and traditional currency by converting your cash into a stable digital currency equivalent.","logo": {"url": "https://nft-ipfs.s3.amazonaws.com/QmWobdZpeyhq8NnUEoqLBzpz9HDTrQ1VoEK52aoh7bMLXE.gif"}}
