@@ -190,3 +190,51 @@ Contract: https://serenity.aurascan.io/contracts/aura1duurdcp8xjae763h2qdc7w06cj
 Github: https://github.com/nttnguyen136/cw-plus/commit/a641136c002c66d033f05eed5c866729c71eb2fa
 Cargo version: cosmwasm/workspace-optimizer:0.12.9
 WASM FILE: cw20_base.wasm
+=====================================================
+Sat Mar 11 10:25:44 +07 2023
+Code ID: 1154
+Aurascan: https://serenity.aurascan.io/transaction/64DB35E27DA27CD2187BFF8FFBE5F8CD1002F1BE6337ED07BD7CE6F2D03BA662
+Contract: https://serenity.aurascan.io/contracts/aura1ngd40zsg2s6wr75pavuk0pxpmese8all8pqa4qwwl55cxfnafc2qh8g9nh
+Github: https://github.com/nttnguyen136/cw-plus/commit/8cbc5ca9089d64800e4673bd860cbcfa04a225e8
+Cargo version: cosmwasm/workspace-optimizer:0.12.9
+WASM FILE: cw20_base.wasm
+=====================================================
+Sat Mar 11 10:48:42 +07 2023
+Code ID: 1155
+Aurascan: https://serenity.aurascan.io/transaction/B6E2334937E7F1BD9C0D5906A3DD1AE9588D0582DAA0ED0665E97D1E85A97DE3
+Contract: https://serenity.aurascan.io/contracts/aura1s6lwuhs0nlvky980snrl9wmjugr5gzs0t88w7j977zevvznuz6lqyvw37l
+Github: https://github.com/nttnguyen136/cw-plus/commit/8cbc5ca9089d64800e4673bd860cbcfa04a225e8
+Cargo version: cosmwasm/workspace-optimizer:0.12.9
+WASM FILE: cw20_base.wasm
+=====================================================
+Sat Mar 11 10:50:11 +07 2023
+Code ID: 1156
+Aurascan: https://serenity.aurascan.io/transaction/B3009DB8C42BE4B1210E7D15B9B4D1B3AA808B0750F1FD9B3BA1A3912BB1644C
+Contract: https://serenity.aurascan.io/contracts/aura10w3qj33wmrll73pjhjz603nx3tjhqqh8fjns46tzpshrglkuktss83t8cn
+Github: https://github.com/nttnguyen136/cw-plus/commit/8cbc5ca9089d64800e4673bd860cbcfa04a225e8
+Cargo version: cosmwasm/workspace-optimizer:0.12.9
+WASM FILE: cw20_base.wasm
+=====================================================
+Sat Mar 11 10:51:09 +07 2023
+Code ID: 1157
+Aurascan: https://serenity.aurascan.io/transaction/53DA0E878B9679A9ACC00EF78C8240CF6B0420D1AA3C5D24ABB52AB47E11BB51
+Contract: https://serenity.aurascan.io/contracts/aura1uvlngvk749tjg5ak0zx2nhtzrdzy0ncv3qgmh25tzrgwypkuky5s7qppyg
+Github: https://github.com/nttnguyen136/cw-plus/commit/8cbc5ca9089d64800e4673bd860cbcfa04a225e8
+Cargo version: cosmwasm/workspace-optimizer:0.12.9
+WASM FILE: cw20_base.wasm
+=====================================================
+Sat Mar 11 10:51:34 +07 2023
+Code ID: 1158
+Aurascan: https://serenity.aurascan.io/transaction/AB0B3E62F6C905083387867F2280725E74878EE8221DE713D56E5E4E9C56D122
+Contract: https://serenity.aurascan.io/contracts/aura1rd2fgfa9z7uy5gvd62e4gldf2aqz4am4ssmczd5er8axd537gxnsdz3f2n
+Github: https://github.com/nttnguyen136/cw-plus/commit/8cbc5ca9089d64800e4673bd860cbcfa04a225e8
+Cargo version: cosmwasm/workspace-optimizer:0.12.9
+WASM FILE: cw20_base.wasm
+=====================================================
+Sat Mar 11 11:11:12 +07 2023
+Code ID: 1159
+Aurascan: https://serenity.aurascan.io/transaction/DD701AF6D8881A19BC7B6DF830671F08E7EEA1A120A67FF7AEEDA76CB2B14C26
+Contract: https://serenity.aurascan.io/contracts/aura1qdgny7v0ruzlp4zw8ywkltscnsk3u7snl8546c3wl670mv2n0dqqmw648c
+Github: https://github.com/nttnguyen136/cw-plus/commit/8cbc5ca9089d64800e4673bd860cbcfa04a225e8
+Cargo version: cosmwasm/workspace-optimizer:0.12.9
+WASM FILE: cw20_base.wasm
