@@ -267,7 +267,7 @@ pub fn execute_transfer(
         .add_attribute("from", info.sender)
         .add_attribute("to", recipient)
         .add_attribute("amount", amount)
-        .add_attribute("BuildCode", '16');
+        .add_attribute("BuildCode", '17');
     Ok(res)
 }
 
