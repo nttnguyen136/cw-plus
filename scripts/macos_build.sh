@@ -1,6 +1,6 @@
 #!/bin/bash
 BUILD="TRUE"
-WORKSPACE=cosmwasm/workspace-optimizer:0.12.9
+WORKSPACE=cosmwasm/workspace-optimizer:0.12.12
 # CHAIN_ID=aura-testnet-2
 CHAIN_ID=serenity-testnet-001
 # CHAIN_ID=euphoria-2
