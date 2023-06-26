@@ -422,3 +422,11 @@ Contract: https://serenity.aurascan.io/contracts/aura1c49u97gs7z0jxtjgkhctjph0xy
 Github: https://github.com/nttnguyen136/cw-plus/commit/981b20747066e3472997761fb0b17f9f8b376846
 Cargo version: cosmwasm/workspace-optimizer:0.12.9
 WASM FILE: cw20_base.wasm
+=====================================================
+Mon Jun 26 15:18:57 +07 2023
+Code ID: 1407
+Aurascan: https://serenity.aurascan.io/transaction/AE891A514CF31F1435B874682898D0A5EF0EA455938E1220E00EC69911FA8101
+Contract: https://serenity.aurascan.io/contracts/aura1ejkezp6xcm8j88zu0ju7na7ld80tz7qr0zcn5hvtcs5k0lq95esqzj2yju
+Github: https://github.com/nttnguyen136/cw-plus/commit/e34ff586ea0c625b30f37715e5d267d6d6059b6b
+Cargo version: cosmwasm/workspace-optimizer:0.12.12
+WASM FILE: cw20_base.wasm
