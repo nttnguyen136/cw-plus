@@ -259,7 +259,7 @@ pub fn execute_transfer(
     )?;
 
     let res = Response::new()
-        .add_attribute("action", "transfer")
+        .add_attribute("action", "Transfer Update 1")
         .add_attribute("from", info.sender)
         .add_attribute("to", recipient)
         .add_attribute("amount", amount);
